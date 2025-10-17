@@ -1,0 +1,61 @@
+.header {
+  // display: none;
+  padding-top: 24px;
+  background-image: url(../images/header_bg_desktop.png);
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    height: 100vh;
+  }
+
+  @include onTablet {
+    padding-top: 50px;
+  }
+
+  @include onDesktop {
+    padding-top: 50px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom {
+    position: absolute;
+    top: 200px;
+    justify-self: center;
+
+    @include onTablet {
+      top: 256px;
+    }
+
+    @include onDesktop {
+      top: 200px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    color: $title-color;
+
+    @include onTablet {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    @include onDesktop {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    justify-self: center;
+    text-align: center;
+  }
+}

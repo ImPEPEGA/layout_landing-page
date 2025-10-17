@@ -1,0 +1,61 @@
+.about-us {
+  display: grid;
+  @include onTablet {
+    grid-template-columns: 3fr 3fr;
+  }
+
+  @include onDesktop {
+    grid-template-columns: 5fr 6fr 1fr;
+  }
+
+  &__category-title {
+    @include onDesktop {
+      grid-column: 1;
+    }
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 24px;
+
+    @include onDesktop {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $main-text-color;
+  }
+
+  &__timetable {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__hours {
+    @include hoursAndDaysSettings;
+    font-weight: 700;
+  }
+
+  &__days {
+    @include hoursAndDaysSettings;
+    font-weight: 400;
+  }
+
+  &__closed {
+    margin-top: 16px;
+    &__title {
+      margin: 0;
+      @include hoursAndDaysSettings;
+    }
+
+    &__content {
+      margin: 0;
+    }
+  }
+}

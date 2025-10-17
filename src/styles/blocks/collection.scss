@@ -1,0 +1,49 @@
+.collection {
+  margin: 0;
+
+  @include onTablet {
+    margin-inline: 176px-72px;
+    max-width: 588px;
+  }
+
+  @include onDesktop {
+    margin-inline: 0;
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    object-fit: cover;
+
+    @include onTablet {
+      margin-bottom: 32px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 32px;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+    justify-self: center;
+    color: $collection-title-color;
+
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  &__description {
+    display: block;
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    color: $collection-desctiption-color;
+    text-align: center;
+  }
+}

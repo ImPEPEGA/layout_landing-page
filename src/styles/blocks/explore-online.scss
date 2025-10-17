@@ -1,0 +1,20 @@
+.explore-online {
+  margin: 0;
+  // max-width: 392px;
+  // justify-self: center;
+
+  &__collections {
+    display: grid;
+    row-gap: 48px;
+
+    @include onTablet {
+      justify-items: center;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 24px;
+      justify-items: stretch;
+    }
+  }
+}

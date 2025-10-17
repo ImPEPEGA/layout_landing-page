@@ -1,0 +1,200 @@
+.contacts {
+  &__content {
+    display: grid;
+
+    @include onTablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__info {
+    display: grid;
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(7, 1fr);
+      grid-column: 1 / 8;
+    }
+  }
+
+  &__form {
+    @include onTablet {
+      grid-column: 4 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / -1;
+    }
+  }
+
+  &__section {
+    margin-bottom: 48px;
+
+    @include onDesktop {
+      grid-column: 1 / 4;
+    }
+
+    &--grid-2 {
+      @include onDesktop {
+        grid-column: 4 / 7;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  &__description {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__phone {
+    display: grid;
+    gap: 4px;
+
+    &__title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+
+    &__description {
+      margin: 0;
+      color: $description-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 140%;
+    }
+  }
+
+  &__address {
+    display: grid;
+    gap: 4px;
+
+    &__title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+
+    &__description {
+      margin: 0;
+      text-decoration: none;
+      color: $description-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 140%;
+
+      &:hover {
+        color: $main-text-color;
+      }
+    }
+  }
+
+  &__fields {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__field {
+    display: block;
+    padding: 0;
+    border: none;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: $input-field-bg-color;
+
+    font-family: 'Cinzel', serif;
+    color: $main-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    padding-left: 16px;
+
+    &:hover {
+      border: 1px solid $input-field-hover-border-color;
+
+      &::placeholder {
+        color: $main-text-color;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $input-field-active-border-color;
+      color: $main-text-color;
+
+      &::placeholder {
+        color: $main-text-color;
+      }
+    }
+
+    &--height {
+      height: 144px;
+      margin-bottom: 32px;
+
+      padding-top: 14px;
+      box-sizing: border-box;
+      resize: none;
+    }
+  }
+
+  // &__button {
+  //   height: 56px;
+  //   display: block;
+  //   margin: auto;
+
+  //   @include hover(background-color, scale(1.2));
+
+  //   background-color: $button-color;
+  //   text-align: center;
+
+  //   &:hover {
+  //     background-color: $button-color-hover;
+  //   }
+
+  //   &:active {
+  //     background-color: $button-color-pressed;
+  //   }
+  // }
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    justify-self: center;
+    border: none;
+
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 56px;
+
+    color: $button-text-color;
+    background-color: $button-color;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+
+    &:active {
+      background-color: $button-color-pressed;
+    }
+  }
+}

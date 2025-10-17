@@ -1,0 +1,131 @@
+.gallery {
+  &__section {
+    margin-bottom: 48px;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $collection-title-color;
+    white-space: pre-line;
+
+    @include onTablet {
+      white-space: nowrap;
+    }
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $collection-desctiption-color;
+  }
+
+  &__photo {
+    display: block;
+    max-width: 130px;
+    max-height: 130px;
+    object-fit: cover;
+
+    &--size {
+      max-width: 88px;
+      max-height: 87px;
+    }
+
+    &--position-left {
+      @include photoPosition(15%);
+    }
+
+    &--position-right {
+      @include photoPosition(100%);
+    }
+
+    @include onTablet {
+      max-width: 184px;
+      max-height: 186px;
+
+      &--position-left {
+        max-width: 392px;
+        max-height: 186px;
+      }
+
+      &--position-right {
+        max-width: 392px;
+        max-height: 186px;
+      }
+
+      &--size {
+        max-width: 288px;
+        max-height: 284px;
+      }
+
+      &--invisible {
+        display: none;
+      }
+    }
+
+    @include onDesktop {
+      max-width: 324px;
+      max-height: 320px;
+
+      &--position-left {
+        max-width: 672px;
+        max-height: 320px;
+      }
+
+      &--position-right {
+        max-width: 672px;
+        max-height: 320px;
+      }
+
+      &--invisible {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    height: 56px;
+    display: block;
+    margin: auto;
+
+    @include hover(background-color, scale(1.2));
+
+    background-color: $button-color;
+    text-align: center;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+
+    &:active {
+      background-color: $button-color-pressed;
+    }
+
+    @include onTablet {
+      max-width: 392px;
+    }
+
+    @include onDesktop {
+      max-width: 324px;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    line-height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $button-text-color;
+  }
+}

@@ -1,0 +1,86 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__logo {
+    display: flex;
+    width: 64px;
+    height: 46px;
+
+    @include hover(transform, scale(1.2));
+
+    @include onTablet {
+      width: 87px;
+      height: 65px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+    @include onTablet {
+      gap: 55px;
+    }
+  }
+
+  &__phone-content {
+    z-index: 1;
+  }
+
+  &__content {
+    display: grid;
+    gap: 8px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: -14px;
+    right: 0;
+    padding-right: 92px;
+
+    @include onTablet {
+      top: -26px;
+      padding-right: 139px;
+    }
+
+    @include onDesktop {
+      top: -26px;
+      padding-right: 139px;
+    }
+  }
+
+  &__title {
+    @include textSettings;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  &__tel {
+    @include textSettings;
+
+    @include onTablet {
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+    @include onDesktop {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+}
+
+.icon--phone:hover + .top-bar__content {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
