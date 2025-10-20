@@ -1,29 +1,23 @@
-@mixin onTablet {
+@mixin on-tablet {
   @media (min-width: 744px) {
     @content;
   }
 }
 
-// @mixin onTabletMoreThan940px {
-//   @media (min-width: 941px) {
-//     @content;
-//   }
-// }
-
-@mixin onDesktop {
+@mixin on-desktop {
   @media (min-width: 1260px) {
     @content;
   }
 }
 
-@mixin paddingInline {
+@mixin padding-inline {
   padding-inline: 20px;
 
-  @include onTablet {
+  @include on-tablet {
     padding-inline: 72px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     max-width: 1020px;
     margin-inline: auto;
     padding-inline: 120px;
@@ -31,7 +25,7 @@
 }
 
 .container {
-  @include paddingInline;
+  @include padding-inline;
 }
 
 @mixin hover($property, $toValue) {
@@ -41,11 +35,25 @@
   }
 }
 
-@mixin photoPosition($value) {
-  object-position: $value;
+@mixin page-grid {
+  --columns: 2;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include on-tablet {
+    --columns: 6;
+
+    column-gap: 24px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+  }
 }
 
-@mixin hoursAndDaysSettings {
+@mixin hours-and-days-settings {
   display: grid;
   margin: 0;
   padding: 0;
@@ -56,7 +64,7 @@
   line-height: 27px;
 }
 
-@mixin textSettings {
+@mixin text-settings {
   margin: 0;
   text-align: right;
   font-size: 10px;

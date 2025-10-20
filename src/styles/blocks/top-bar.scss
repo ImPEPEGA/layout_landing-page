@@ -11,7 +11,7 @@
 
     @include hover(transform, scale(1.2));
 
-    @include onTablet {
+    @include on-tablet {
       width: 87px;
       height: 65px;
     }
@@ -20,7 +20,8 @@
   &__icons {
     display: flex;
     gap: 24px;
-    @include onTablet {
+
+    @include on-tablet {
       gap: 55px;
     }
   }
@@ -30,50 +31,48 @@
   }
 
   &__content {
-    display: grid;
+    display: none;
     gap: 8px;
 
     opacity: 0;
     transition: opacity 0.3s;
     position: absolute;
-    top: -14px;
     right: 0;
-    padding-right: 92px;
+    top: -26px;
+    padding-right: 139px;
 
-    @include onTablet {
-      top: -26px;
-      padding-right: 139px;
+    @include on-tablet {
+      display: none;
     }
 
-    @include onDesktop {
-      top: -26px;
-      padding-right: 139px;
+    @include on-desktop {
+      display: grid;
     }
   }
 
   &__title {
-    @include textSettings;
+    @include text-settings;
 
-    @include onTablet {
+    @include on-tablet {
       font-size: 16px;
       line-height: 27px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       font-size: 16px;
       line-height: 27px;
     }
   }
 
   &__tel {
-    @include textSettings;
+    @include text-settings;
 
-    @include onTablet {
-    font-size: 16px;
-    line-height: 27px;
-  }
+    @include on-tablet {
+      font-size: 16px;
+      line-height: 27px;
+    }
 
-    @include onDesktop {
+    @include on-desktop {
       font-size: 16px;
       line-height: 27px;
     }

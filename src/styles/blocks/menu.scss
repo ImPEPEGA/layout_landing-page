@@ -8,11 +8,11 @@
   text-transform: uppercase;
   overflow: auto;
 
-  @include onTablet {
+  @include on-tablet {
     padding-top: 50px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     padding-top: 50px;
   }
 
@@ -26,7 +26,7 @@
     height: 24px;
     background-color: $menu-bg-color;
 
-    @include onTablet {
+    @include on-tablet {
       display: none;
     }
   }
@@ -38,7 +38,7 @@
     z-index: 1;
     background-color: $menu-bg-color;
 
-    @include onTablet {
+    @include on-tablet {
       top: 0;
     }
   }

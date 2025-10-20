@@ -1,12 +1,8 @@
 .gallery {
-  &__section {
-    margin-bottom: 48px;
-  }
-
-  &__images {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+  &__sections {
+    display: grid;
+    row-gap: 48px;
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -15,9 +11,8 @@
     font-weight: 700;
     line-height: 27px;
     color: $collection-title-color;
-    white-space: pre-line;
 
-    @include onTablet {
+    @include on-tablet {
       white-space: nowrap;
     }
   }
@@ -30,66 +25,81 @@
     color: $collection-desctiption-color;
   }
 
-  &__photo {
-    display: block;
-    max-width: 130px;
-    max-height: 130px;
-    object-fit: cover;
+  &__photos {
+    @include page-grid;
 
-    &--size {
-      max-width: 88px;
-      max-height: 87px;
+    margin-bottom: 24px;
+
+    &--size-count {
+      --columns: 3;
+
+      column-gap: 8px;
+
+      @include on-tablet {
+        --columns: 4;
+
+        column-gap: 24px;
+        grid-column: span 2;
+      }
+
+      @include on-desktop {
+        --columns: 12;
+
+        column-gap: 24px;
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    &--wide {
+      @include on-tablet {
+        grid-column: span 4;
+      }
+
+      @include on-desktop {
+        grid-column: span 8;
+      }
     }
 
+    &--square {
+      height: 0;
+      padding-bottom: 100%;
+
+      @include on-tablet {
+        grid-column: span 2;
+      }
+
+      @include on-desktop {
+        grid-column: span 4;
+      }
+    }
+
+    &--invisible {
+      @include on-tablet {
+        display: none;
+      }
+
+      @include on-desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
     &--position-left {
-      @include photoPosition(15%);
+      object-position: 20%;
     }
 
     &--position-right {
-      @include photoPosition(100%);
-    }
-
-    @include onTablet {
-      max-width: 184px;
-      max-height: 186px;
-
-      &--position-left {
-        max-width: 392px;
-        max-height: 186px;
-      }
-
-      &--position-right {
-        max-width: 392px;
-        max-height: 186px;
-      }
-
-      &--size {
-        max-width: 288px;
-        max-height: 284px;
-      }
-
-      &--invisible {
-        display: none;
-      }
-    }
-
-    @include onDesktop {
-      max-width: 324px;
-      max-height: 320px;
-
-      &--position-left {
-        max-width: 672px;
-        max-height: 320px;
-      }
-
-      &--position-right {
-        max-width: 672px;
-        max-height: 320px;
-      }
-
-      &--invisible {
-        display: block;
-      }
+      object-position: right;
     }
   }
 
@@ -111,16 +121,16 @@
       background-color: $button-color-pressed;
     }
 
-    @include onTablet {
+    @include on-tablet {
       max-width: 392px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       max-width: 324px;
     }
   }
 
-  &__link {
+  &__button-link {
     display: block;
     text-decoration: none;
     line-height: 56px;

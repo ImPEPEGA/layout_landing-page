@@ -1,5 +1,4 @@
 .header {
-  // display: none;
   padding-top: 24px;
   background-image: url(../images/header_bg_desktop.png);
   background-size: cover;
@@ -9,11 +8,11 @@
     height: 100vh;
   }
 
-  @include onTablet {
+  @include on-tablet {
     padding-top: 50px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     padding-top: 50px;
   }
 
@@ -28,11 +27,11 @@
     top: 200px;
     justify-self: center;
 
-    @include onTablet {
+    @include on-tablet {
       top: 256px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       top: 200px;
     }
   }
@@ -45,12 +44,12 @@
     letter-spacing: -1.5px;
     color: $title-color;
 
-    @include onTablet {
+    @include on-tablet {
       font-size: 64px;
       line-height: 64px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       font-size: 80px;
       line-height: 80px;
     }

@@ -14,7 +14,8 @@
     <link
       rel="icon"
       href="images/the-met-logo.png"
-      type="image/png">
+      type="image/png"
+    />
     <link
       rel="stylesheet"
       href="./styles/style.scss"
@@ -26,7 +27,6 @@
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-      crossorigin
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
@@ -83,7 +83,7 @@
             <h1 class="header__title">
               Welcome
               <br />
-               to The MET
+              to The MET
             </h1>
           </div>
         </div>
@@ -256,17 +256,28 @@
 
             <div class="gallery__sections">
               <article class="gallery__section">
-                <div class="gallery__images">
-                  <img
-                    src="images/Paintings_left.png"
-                    alt="a new look at old masters"
-                    class="gallery__photo gallery__photo--position-left"
-                  />
-                  <img
-                    src="images/Paintings_right.png"
-                    alt="photo by Maxine Helfman"
-                    class="gallery__photo"
-                  />
+                <div class="gallery__photos">
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--wide"
+                  >
+                    <img
+                      src="images/Paintings_left.png"
+                      alt="a new look at old masters"
+                      class="gallery__photo gallery__photo--position-left"
+                    />
+                  </a>
+
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--square"
+                  >
+                    <img
+                      src="images/Paintings_right.png"
+                      alt="photo by Maxine Helfman"
+                      class="gallery__photo"
+                    />
+                  </a>
                 </div>
 
                 <div class="gallery__description">
@@ -278,22 +289,37 @@
               </article>
 
               <article class="gallery__section">
-                <div class="gallery__images gallery__images--grid-gap">
-                  <img
-                    src="images/Buddhism1.png"
-                    alt="a new look at old masters"
-                    class="gallery__photo gallery__photo--size"
-                  />
-                  <img
-                    src="images/Buddhism2.png"
-                    alt="photo by Maxine Helfman"
-                    class="gallery__photo gallery__photo--size"
-                  />
-                  <img
-                    src="images/Buddhism3.png"
-                    alt="photo by Maxine Helfman"
-                    class="gallery__photo gallery__photo--size gallery__photo--invisible"
-                  />
+                <div class="gallery__photos gallery__photos--size-count">
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--square"
+                  >
+                    <img
+                      src="images/Buddhism1.png"
+                      alt="a new look at old masters"
+                      class="gallery__photo"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--square"
+                  >
+                    <img
+                      src="images/Buddhism2.png"
+                      alt="photo by Maxine Helfman"
+                      class="gallery__photo"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--square gallery__link--invisible"
+                  >
+                    <img
+                      src="images/Buddhism3.png"
+                      alt="photo by Maxine Helfman"
+                      class="gallery__photo"
+                    />
+                  </a>
                 </div>
 
                 <div class="gallery__description">
@@ -305,17 +331,27 @@
               </article>
 
               <article class="gallery__section">
-                <div class="gallery__images">
-                  <img
-                    src="images/WaltDisney_left.png"
-                    alt="a new look at old masters"
-                    class="gallery__photo"
-                  />
-                  <img
-                    src="images/WaltDisney_right.png"
-                    alt="photo by Maxine Helfman"
-                    class="gallery__photo gallery__photo--position-right"
-                  />
+                <div class="gallery__photos">
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--square"
+                  >
+                    <img
+                      src="images/WaltDisney_left.png"
+                      alt="a new look at old masters"
+                      class="gallery__photo"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="gallery__link gallery__link--wide"
+                  >
+                    <img
+                      src="images/WaltDisney_right.png"
+                      alt="photo by Maxine Helfman"
+                      class="gallery__photo gallery__photo--position-right"
+                    />
+                  </a>
                 </div>
 
                 <div class="gallery__description">
@@ -331,7 +367,7 @@
             <div class="gallery__button">
               <a
                 href="#"
-                class="gallery__link"
+                class="gallery__button-link"
               >
                 View all exhibitions
               </a>
@@ -401,18 +437,22 @@
                   <div class="contacts__description">
                     <div class="contacts__phone">
                       <p class="contacts__phone__title">Phone</p>
-                      <p class="contacts__phone__description">
+                      <a
+                        href="tel:+1 212-535-7710"
+                        class="contacts__phone__description"
+                      >
                         +1 212-535-7710
-                      </p>
+                      </a>
                     </div>
                     <div class="contacts__address">
                       <p class="contacts__address__title">Address</p>
                       <a
                         href="https://maps.app.goo.gl/QQiPoYHRkLVxYW2ZA"
                         class="contacts__address__description"
-                        target="_blank">
+                        target="_blank"
+                      >
                         1000 Fifth Avenue
-                        <br/>
+                        <br />
                         New York, NY 10028
                       </a>
                     </div>
@@ -423,20 +463,24 @@
                   <div class="contacts__description">
                     <div class="contacts__phone">
                       <p class="contacts__phone__title">Phone</p>
-                      <p class="contacts__phone__description">
+                      <a
+                        href="tel:+1 212-923-3700"
+                        class="contacts__phone__description"
+                      >
                         +1 212-923-3700
-                      </p>
+                      </a>
                     </div>
                     <div class="contacts__address">
                       <p class="contacts__address__title">Address</p>
                       <a
                         href="https://maps.app.goo.gl/Zx8S8jUPHvTBt5rh9"
                         class="contacts__address__description"
-                        target="_blank">
+                        target="_blank"
+                      >
                         99 Margaret Corbin Drive
-                        <br/>
+                        <br />
                         Fort Tryon Park
-                        <br/>
+                        <br />
                         New York, NY 10040
                       </a>
                     </div>
@@ -444,9 +488,11 @@
                 </div>
               </div>
 
-              <form class="contacts__form" onsubmit="this.reset(); return false;">
-                <div
-                  class="contacts__fields">
+              <form
+                class="contacts__form"
+                onsubmit="this.reset(); return false;"
+              >
+                <div class="contacts__fields">
                   <input
                     type="text"
                     class="contacts__field"
@@ -472,7 +518,7 @@
                   type="submit"
                   class="contacts__button"
                   value="Send"
-                >
+                />
                 <!-- </div> -->
               </form>
             </div>

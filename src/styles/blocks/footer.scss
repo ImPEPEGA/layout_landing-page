@@ -7,12 +7,12 @@
   background-position: center;
   z-index: -1;
 
-  @include onTablet {
+  @include on-tablet {
     height: 360px;
     background-position: -321px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     height: 360px;
     background-position: center;
   }
